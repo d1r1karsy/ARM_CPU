@@ -2423,61 +2423,61 @@
 .attr src "/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/cells_map.v:52"
 .param LUT_INIT 1111100010001000
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[10] CO=$auto$alumacc.cc:474:replace_alu$5161.C[11] I0=$false I1=$abc$21176$n3137
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[11] CO=$auto$alumacc.cc:474:replace_alu$5161.C[12] I0=$false I1=$abc$21176$n3217
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[12] CO=$auto$alumacc.cc:474:replace_alu$5161.C[13] I0=$false I1=$abc$21176$n3139
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[13] CO=$auto$alumacc.cc:474:replace_alu$5161.C[14] I0=$false I1=$abc$21176$n3141
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[14] CO=$auto$alumacc.cc:474:replace_alu$5161.C[15] I0=$false I1=$abc$21176$n3219
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[15] CO=$auto$alumacc.cc:474:replace_alu$5161.C[16] I0=$false I1=$abc$21176$n3143
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[16] CO=$auto$alumacc.cc:474:replace_alu$5161.C[17] I0=$false I1=$abc$21176$n3145
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[17] CO=$auto$alumacc.cc:474:replace_alu$5161.C[18] I0=$false I1=$abc$21176$n3147
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[18] CO=$auto$alumacc.cc:474:replace_alu$5161.C[19] I0=$false I1=$abc$21176$n3221
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[19] CO=$auto$alumacc.cc:474:replace_alu$5161.C[20] I0=$false I1=$abc$21176$n3149
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[20] CO=$auto$alumacc.cc:474:replace_alu$5161.C[21] I0=$false I1=$abc$21176$n3151
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[21] CO=$auto$alumacc.cc:474:replace_alu$5161.C[22] I0=$false I1=$abc$21176$n3153
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[22] CO=$auto$alumacc.cc:474:replace_alu$5161.C[23] I0=$false I1=$abc$21176$n3155
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[23] CO=$auto$alumacc.cc:474:replace_alu$5161.C[24] I0=$false I1=$abc$21176$n3223
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[24] CO=$auto$alumacc.cc:474:replace_alu$5161.C[25] I0=$false I1=$abc$21176$n3157
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[25] CO=$auto$alumacc.cc:474:replace_alu$5161.C[26] I0=$false I1=$abc$21176$n3159
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[26] CO=$auto$alumacc.cc:474:replace_alu$5161.C[27] I0=$false I1=$abc$21176$n3161
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[27] CO=$auto$alumacc.cc:474:replace_alu$5161.C[28] I0=$false I1=$abc$21176$n3163
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[28] CO=$auto$alumacc.cc:474:replace_alu$5161.C[29] I0=$false I1=$abc$21176$n3225
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[29] CO=$abc$21176$n2662 I0=$false I1=$abc$21176$n3227
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$abc$21176$n3001 CO=$auto$alumacc.cc:474:replace_alu$5161.C[3] I0=$false I1=$abc$21176$n3165
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[3] CO=$auto$alumacc.cc:474:replace_alu$5161.C[4] I0=$true I1=$abc$21176$n3123
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[4] CO=$auto$alumacc.cc:474:replace_alu$5161.C[5] I0=$false I1=$abc$21176$n3125
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[5] CO=$auto$alumacc.cc:474:replace_alu$5161.C[6] I0=$false I1=$abc$21176$n3127
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[6] CO=$auto$alumacc.cc:474:replace_alu$5161.C[7] I0=$false I1=$abc$21176$n3129
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[7] CO=$auto$alumacc.cc:474:replace_alu$5161.C[8] I0=$false I1=$abc$21176$n3131
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[8] CO=$auto$alumacc.cc:474:replace_alu$5161.C[9] I0=$false I1=$abc$21176$n3133
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5161.C[9] CO=$auto$alumacc.cc:474:replace_alu$5161.C[10] I0=$false I1=$abc$21176$n3135
-.attr src "top.v:96|cpu.v:113|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:122|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$abc$21176$n107 CO=$auto$alumacc.cc:474:replace_alu$5166.C[2] I0=$true I1=$abc$21176$n3215
 .attr src "top.v:132|usb/usb_uart_i40.v:58|usb/usb_uart.v:271|usb/usb_fs_pe.v:156|usb/usb_fs_out_pe.v:116|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5166.C[2] CO=$auto$alumacc.cc:474:replace_alu$5166.C[3] I0=$false I1=$abc$21176$n106
@@ -3253,296 +3253,296 @@
 .attr src "top.v:132|usb/usb_uart_i40.v:58|usb/usb_uart.v:271|usb/usb_fs_pe.v:156|usb/usb_fs_out_pe.v:395|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_LUT4 I0=$false I1=$true I2=the_cpu.pc[0] I3=$false O=$abc$21176$n2775
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[10] I3=$auto$alumacc.cc:474:replace_alu$5295.C[10] O=$abc$21176$n2786
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[10] CO=$auto$alumacc.cc:474:replace_alu$5295.C[11] I0=$false I1=the_cpu.pc[10]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[11] I3=$auto$alumacc.cc:474:replace_alu$5295.C[11] O=$abc$21176$n2787
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[11] CO=$auto$alumacc.cc:474:replace_alu$5295.C[12] I0=$false I1=the_cpu.pc[11]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[12] I3=$auto$alumacc.cc:474:replace_alu$5295.C[12] O=$abc$21176$n2788
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[12] CO=$auto$alumacc.cc:474:replace_alu$5295.C[13] I0=$false I1=the_cpu.pc[12]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[13] I3=$auto$alumacc.cc:474:replace_alu$5295.C[13] O=$abc$21176$n2789
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[13] CO=$auto$alumacc.cc:474:replace_alu$5295.C[14] I0=$false I1=the_cpu.pc[13]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[14] I3=$auto$alumacc.cc:474:replace_alu$5295.C[14] O=$abc$21176$n2790
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[14] CO=$auto$alumacc.cc:474:replace_alu$5295.C[15] I0=$false I1=the_cpu.pc[14]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[15] I3=$auto$alumacc.cc:474:replace_alu$5295.C[15] O=$abc$21176$n2791
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[15] CO=$auto$alumacc.cc:474:replace_alu$5295.C[16] I0=$false I1=the_cpu.pc[15]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[16] I3=$auto$alumacc.cc:474:replace_alu$5295.C[16] O=$abc$21176$n2792
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[16] CO=$auto$alumacc.cc:474:replace_alu$5295.C[17] I0=$false I1=the_cpu.pc[16]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[17] I3=$auto$alumacc.cc:474:replace_alu$5295.C[17] O=$abc$21176$n2793
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[17] CO=$auto$alumacc.cc:474:replace_alu$5295.C[18] I0=$false I1=the_cpu.pc[17]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[18] I3=$auto$alumacc.cc:474:replace_alu$5295.C[18] O=$abc$21176$n2794
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[18] CO=$auto$alumacc.cc:474:replace_alu$5295.C[19] I0=$false I1=the_cpu.pc[18]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[19] I3=$auto$alumacc.cc:474:replace_alu$5295.C[19] O=$abc$21176$n2795
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[19] CO=$auto$alumacc.cc:474:replace_alu$5295.C[20] I0=$false I1=the_cpu.pc[19]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_CARRY CI=the_cpu.pc[0] CO=$auto$alumacc.cc:474:replace_alu$5295.C[2] I0=$false I1=pin_led
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[20] I3=$auto$alumacc.cc:474:replace_alu$5295.C[20] O=$abc$21176$n2796
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[20] CO=$auto$alumacc.cc:474:replace_alu$5295.C[21] I0=$false I1=the_cpu.pc[20]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[21] I3=$auto$alumacc.cc:474:replace_alu$5295.C[21] O=$abc$21176$n2797
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[21] CO=$auto$alumacc.cc:474:replace_alu$5295.C[22] I0=$false I1=the_cpu.pc[21]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[22] I3=$auto$alumacc.cc:474:replace_alu$5295.C[22] O=$abc$21176$n2798
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[22] CO=$auto$alumacc.cc:474:replace_alu$5295.C[23] I0=$false I1=the_cpu.pc[22]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[23] I3=$auto$alumacc.cc:474:replace_alu$5295.C[23] O=$abc$21176$n2799
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[23] CO=$auto$alumacc.cc:474:replace_alu$5295.C[24] I0=$false I1=the_cpu.pc[23]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[24] I3=$auto$alumacc.cc:474:replace_alu$5295.C[24] O=$abc$21176$n2800
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[24] CO=$auto$alumacc.cc:474:replace_alu$5295.C[25] I0=$false I1=the_cpu.pc[24]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[25] I3=$auto$alumacc.cc:474:replace_alu$5295.C[25] O=$abc$21176$n2801
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[25] CO=$auto$alumacc.cc:474:replace_alu$5295.C[26] I0=$false I1=the_cpu.pc[25]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[26] I3=$auto$alumacc.cc:474:replace_alu$5295.C[26] O=$abc$21176$n2802
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[26] CO=$auto$alumacc.cc:474:replace_alu$5295.C[27] I0=$false I1=the_cpu.pc[26]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[27] I3=$auto$alumacc.cc:474:replace_alu$5295.C[27] O=$abc$21176$n2803
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[27] CO=$auto$alumacc.cc:474:replace_alu$5295.C[28] I0=$false I1=the_cpu.pc[27]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[28] I3=$auto$alumacc.cc:474:replace_alu$5295.C[28] O=$abc$21176$n2804
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[28] CO=$auto$alumacc.cc:474:replace_alu$5295.C[29] I0=$false I1=the_cpu.pc[28]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[29] I3=$auto$alumacc.cc:474:replace_alu$5295.C[29] O=$abc$21176$n2805
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[2] I3=$auto$alumacc.cc:474:replace_alu$5295.C[2] O=$abc$21176$n2778
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[2] CO=$auto$alumacc.cc:474:replace_alu$5295.C[3] I0=$false I1=the_cpu.pc[2]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[3] I3=$auto$alumacc.cc:474:replace_alu$5295.C[3] O=$abc$21176$n2779
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[3] CO=$auto$alumacc.cc:474:replace_alu$5295.C[4] I0=$false I1=the_cpu.pc[3]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[4] I3=$auto$alumacc.cc:474:replace_alu$5295.C[4] O=$abc$21176$n2780
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[4] CO=$auto$alumacc.cc:474:replace_alu$5295.C[5] I0=$false I1=the_cpu.pc[4]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[5] I3=$auto$alumacc.cc:474:replace_alu$5295.C[5] O=$abc$21176$n2781
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[5] CO=$auto$alumacc.cc:474:replace_alu$5295.C[6] I0=$false I1=the_cpu.pc[5]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[6] I3=$auto$alumacc.cc:474:replace_alu$5295.C[6] O=$abc$21176$n2782
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[6] CO=$auto$alumacc.cc:474:replace_alu$5295.C[7] I0=$false I1=the_cpu.pc[6]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[7] I3=$auto$alumacc.cc:474:replace_alu$5295.C[7] O=$abc$21176$n2783
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[7] CO=$auto$alumacc.cc:474:replace_alu$5295.C[8] I0=$false I1=the_cpu.pc[7]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[8] I3=$auto$alumacc.cc:474:replace_alu$5295.C[8] O=$abc$21176$n2784
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[8] CO=$auto$alumacc.cc:474:replace_alu$5295.C[9] I0=$false I1=the_cpu.pc[8]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[9] I3=$auto$alumacc.cc:474:replace_alu$5295.C[9] O=$abc$21176$n2785
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5295.C[9] CO=$auto$alumacc.cc:474:replace_alu$5295.C[10] I0=$false I1=the_cpu.pc[9]
-.attr src "top.v:96|cpu.v:120|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:129|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[0] I2=the_cpu.pc[0] I3=$false O=$abc$21176$n2715
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$false CO=$auto$alumacc.cc:474:replace_alu$5298.C[1] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[0] I1=the_cpu.pc[0]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[10] I2=the_cpu.pc[10] I3=$auto$alumacc.cc:474:replace_alu$5298.C[10] O=$abc$21176$n2736
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[10] CO=$auto$alumacc.cc:474:replace_alu$5298.C[11] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[10] I1=the_cpu.pc[10]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[11] I2=the_cpu.pc[11] I3=$auto$alumacc.cc:474:replace_alu$5298.C[11] O=$abc$21176$n2738
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[11] CO=$auto$alumacc.cc:474:replace_alu$5298.C[12] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[11] I1=the_cpu.pc[11]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[12] I2=the_cpu.pc[12] I3=$auto$alumacc.cc:474:replace_alu$5298.C[12] O=$abc$21176$n2740
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[12] CO=$auto$alumacc.cc:474:replace_alu$5298.C[13] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[12] I1=the_cpu.pc[12]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[13] I2=the_cpu.pc[13] I3=$auto$alumacc.cc:474:replace_alu$5298.C[13] O=$abc$21176$n2742
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[13] CO=$auto$alumacc.cc:474:replace_alu$5298.C[14] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[13] I1=the_cpu.pc[13]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[14] I2=the_cpu.pc[14] I3=$auto$alumacc.cc:474:replace_alu$5298.C[14] O=$abc$21176$n2744
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[14] CO=$auto$alumacc.cc:474:replace_alu$5298.C[15] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[14] I1=the_cpu.pc[14]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[15] I2=the_cpu.pc[15] I3=$auto$alumacc.cc:474:replace_alu$5298.C[15] O=$abc$21176$n2746
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[15] CO=$auto$alumacc.cc:474:replace_alu$5298.C[16] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[15] I1=the_cpu.pc[15]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[16] I2=the_cpu.pc[16] I3=$auto$alumacc.cc:474:replace_alu$5298.C[16] O=$abc$21176$n2748
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[16] CO=$auto$alumacc.cc:474:replace_alu$5298.C[17] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[16] I1=the_cpu.pc[16]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[17] I2=the_cpu.pc[17] I3=$auto$alumacc.cc:474:replace_alu$5298.C[17] O=$abc$21176$n2750
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[17] CO=$auto$alumacc.cc:474:replace_alu$5298.C[18] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[17] I1=the_cpu.pc[17]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[18] I2=the_cpu.pc[18] I3=$auto$alumacc.cc:474:replace_alu$5298.C[18] O=$abc$21176$n2752
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[18] CO=$auto$alumacc.cc:474:replace_alu$5298.C[19] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[18] I1=the_cpu.pc[18]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[19] I2=the_cpu.pc[19] I3=$auto$alumacc.cc:474:replace_alu$5298.C[19] O=$abc$21176$n2754
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[19] CO=$auto$alumacc.cc:474:replace_alu$5298.C[20] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[19] I1=the_cpu.pc[19]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[1] I2=pin_led I3=$auto$alumacc.cc:474:replace_alu$5298.C[1] O=$abc$21176$n2718
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[1] CO=$auto$alumacc.cc:474:replace_alu$5298.C[2] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[1] I1=pin_led
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[20] I2=the_cpu.pc[20] I3=$auto$alumacc.cc:474:replace_alu$5298.C[20] O=$abc$21176$n2756
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[20] CO=$auto$alumacc.cc:474:replace_alu$5298.C[21] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[20] I1=the_cpu.pc[20]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[21] I2=the_cpu.pc[21] I3=$auto$alumacc.cc:474:replace_alu$5298.C[21] O=$abc$21176$n2758
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[21] CO=$auto$alumacc.cc:474:replace_alu$5298.C[22] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[21] I1=the_cpu.pc[21]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[22] I2=the_cpu.pc[22] I3=$auto$alumacc.cc:474:replace_alu$5298.C[22] O=$abc$21176$n2760
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[22] CO=$auto$alumacc.cc:474:replace_alu$5298.C[23] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[22] I1=the_cpu.pc[22]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[23] I2=the_cpu.pc[23] I3=$auto$alumacc.cc:474:replace_alu$5298.C[23] O=$abc$21176$n2762
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[23] CO=$auto$alumacc.cc:474:replace_alu$5298.C[24] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[23] I1=the_cpu.pc[23]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[24] I2=the_cpu.pc[24] I3=$auto$alumacc.cc:474:replace_alu$5298.C[24] O=$abc$21176$n2764
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[24] CO=$auto$alumacc.cc:474:replace_alu$5298.C[25] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[24] I1=the_cpu.pc[24]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$abc$21176$n3239 I2=the_cpu.pc[25] I3=$auto$alumacc.cc:474:replace_alu$5298.C[25] O=$abc$21176$n2766
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[25] CO=$auto$alumacc.cc:474:replace_alu$5298.C[26] I0=$abc$21176$n3239 I1=the_cpu.pc[25]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[26] I3=$auto$alumacc.cc:474:replace_alu$5298.C[26] O=$abc$21176$n2768
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[26] CO=$auto$alumacc.cc:474:replace_alu$5298.C[27] I0=$false I1=the_cpu.pc[26]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[27] I3=$auto$alumacc.cc:474:replace_alu$5298.C[27] O=$abc$21176$n2770
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[27] CO=$auto$alumacc.cc:474:replace_alu$5298.C[28] I0=$false I1=the_cpu.pc[27]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[28] I3=$auto$alumacc.cc:474:replace_alu$5298.C[28] O=$abc$21176$n2772
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[28] CO=$auto$alumacc.cc:474:replace_alu$5298.C[29] I0=$false I1=the_cpu.pc[28]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$false I2=the_cpu.pc[29] I3=$auto$alumacc.cc:474:replace_alu$5298.C[29] O=$abc$21176$n2774
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[2] I2=the_cpu.pc[2] I3=$auto$alumacc.cc:474:replace_alu$5298.C[2] O=$abc$21176$n2720
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[2] CO=$auto$alumacc.cc:474:replace_alu$5298.C[3] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[2] I1=the_cpu.pc[2]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[3] I2=the_cpu.pc[3] I3=$auto$alumacc.cc:474:replace_alu$5298.C[3] O=$abc$21176$n2722
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[3] CO=$auto$alumacc.cc:474:replace_alu$5298.C[4] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[3] I1=the_cpu.pc[3]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[4] I2=the_cpu.pc[4] I3=$auto$alumacc.cc:474:replace_alu$5298.C[4] O=$abc$21176$n2724
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[4] CO=$auto$alumacc.cc:474:replace_alu$5298.C[5] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[4] I1=the_cpu.pc[4]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[5] I2=the_cpu.pc[5] I3=$auto$alumacc.cc:474:replace_alu$5298.C[5] O=$abc$21176$n2726
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[5] CO=$auto$alumacc.cc:474:replace_alu$5298.C[6] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[5] I1=the_cpu.pc[5]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[6] I2=the_cpu.pc[6] I3=$auto$alumacc.cc:474:replace_alu$5298.C[6] O=$abc$21176$n2728
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[6] CO=$auto$alumacc.cc:474:replace_alu$5298.C[7] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[6] I1=the_cpu.pc[6]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[7] I2=the_cpu.pc[7] I3=$auto$alumacc.cc:474:replace_alu$5298.C[7] O=$abc$21176$n2730
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[7] CO=$auto$alumacc.cc:474:replace_alu$5298.C[8] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[7] I1=the_cpu.pc[7]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[8] I2=the_cpu.pc[8] I3=$auto$alumacc.cc:474:replace_alu$5298.C[8] O=$abc$21176$n2732
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[8] CO=$auto$alumacc.cc:474:replace_alu$5298.C[9] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[8] I1=the_cpu.pc[8]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=$auto$alumacc.cc:474:replace_alu$5298.AA[9] I2=the_cpu.pc[9] I3=$auto$alumacc.cc:474:replace_alu$5298.C[9] O=$abc$21176$n2734
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
 .gate SB_CARRY CI=$auto$alumacc.cc:474:replace_alu$5298.C[9] CO=$auto$alumacc.cc:474:replace_alu$5298.C[10] I0=$auto$alumacc.cc:474:replace_alu$5298.AA[9] I1=the_cpu.pc[9]
-.attr src "top.v:96|cpu.v:118|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
+.attr src "top.v:96|cpu.v:127|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:47"
 .gate SB_LUT4 I0=$false I1=uart.uart.usb_fs_pe_inst.usb_fs_out_pe_inst.ep_put_addr[0][0] I2=$true I3=$true O=$abc$21176$n3195
 .attr src "top.v:132|usb/usb_uart_i40.v:58|usb/usb_uart.v:271|usb/usb_fs_pe.v:156|usb/usb_fs_out_pe.v:187|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/arith_map.v:53"
 .param LUT_INIT 0110100110010110
@@ -4641,7 +4641,7 @@
 .attr src "/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/cells_map.v:2"
 .gate SB_RAM40_4K MASK[0]=$undef MASK[1]=$undef MASK[2]=$undef MASK[3]=$undef MASK[4]=$undef MASK[5]=$undef MASK[6]=$undef MASK[7]=$undef MASK[8]=$undef MASK[9]=$undef MASK[10]=$undef MASK[11]=$undef MASK[12]=$undef MASK[13]=$undef MASK[14]=$undef MASK[15]=$undef RADDR[0]=$abc$21176$n2645 RADDR[1]=$abc$21176$n2647 RADDR[2]=$abc$21176$n2649 RADDR[3]=$abc$21176$n2651 RADDR[4]=$abc$21176$n2653 RADDR[5]=$abc$21176$n2655 RADDR[6]=$abc$21176$n2657 RADDR[7]=$abc$21176$n2659 RADDR[8]=$abc$21176$n2661 RADDR[9]=$false RADDR[10]=$false RCLK=clk_a1hz RCLKE=$true RDATA[0]=$auto$alumacc.cc:474:replace_alu$5298.AA[0] RDATA[1]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[1] RDATA[2]=$auto$alumacc.cc:474:replace_alu$5298.AA[1] RDATA[3]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[3] RDATA[4]=$auto$alumacc.cc:474:replace_alu$5298.AA[2] RDATA[5]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[5] RDATA[6]=$auto$alumacc.cc:474:replace_alu$5298.AA[3] RDATA[7]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[7] RDATA[8]=$auto$alumacc.cc:474:replace_alu$5298.AA[4] RDATA[9]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[9] RDATA[10]=$auto$alumacc.cc:474:replace_alu$5298.AA[5] RDATA[11]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[11] RDATA[12]=$auto$alumacc.cc:474:replace_alu$5298.AA[6] RDATA[13]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[13] RDATA[14]=$auto$alumacc.cc:474:replace_alu$5298.AA[7] RDATA[15]=$techmap5704\the_cpu.code_mem.0.0.0.A1DATA_16[15] RE=$true WADDR[0]=$false WADDR[1]=$false WADDR[2]=$false WADDR[3]=$false WADDR[4]=$false WADDR[5]=$false WADDR[6]=$false WADDR[7]=$false WADDR[8]=$false WADDR[9]=$false WADDR[10]=$false WCLK=$false WCLKE=$false WDATA[0]=$false WDATA[1]=$undef WDATA[2]=$false WDATA[3]=$undef WDATA[4]=$false WDATA[5]=$undef WDATA[6]=$false WDATA[7]=$undef WDATA[8]=$false WDATA[9]=$undef WDATA[10]=$false WDATA[11]=$undef WDATA[12]=$false WDATA[13]=$undef WDATA[14]=$false WDATA[15]=$undef WE=$true
 .attr src "/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:277|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:35"
-.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x0x1x0x1x0x0x1x1x0x1x0x1x0x0x0x1x0x1x0x0x1x1x1x1x1x1x1x1x1x0x1x1x0x1x0x0x1x0x1x1x0x1x0x0x1x0x0x1x0x1x0x0x0x1x1x1x0x1x0x0x0x1x0x0x0x0x0x0x0x1x1x1x0x1x0x0x0x0x0
+.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x0x1x0x1x0x0x1x1x0x1x0x1x0x0x0x1x0x1x0x0x0x1x0x1x0x1x0x0x1x1x0x1x0x1x0x0x1x0x1x1x0x1x0x0x1x0x0x1x0x1x0x0x0x1x1x1x0x1x0x0x0x1x0x0x0x0x0x0x0x1x1x1x0x1x0x0x0x0x0
 .param INIT_1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_3 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -4661,7 +4661,7 @@
 .param WRITE_MODE 00000000000000000000000000000001
 .gate SB_RAM40_4K MASK[0]=$undef MASK[1]=$undef MASK[2]=$undef MASK[3]=$undef MASK[4]=$undef MASK[5]=$undef MASK[6]=$undef MASK[7]=$undef MASK[8]=$undef MASK[9]=$undef MASK[10]=$undef MASK[11]=$undef MASK[12]=$undef MASK[13]=$undef MASK[14]=$undef MASK[15]=$undef RADDR[0]=the_cpu.pc[0] RADDR[1]=pin_led RADDR[2]=the_cpu.pc[2] RADDR[3]=the_cpu.pc[3] RADDR[4]=the_cpu.pc[4] RADDR[5]=the_cpu.pc[5] RADDR[6]=the_cpu.pc[6] RADDR[7]=$false RADDR[8]=$false RADDR[9]=$false RADDR[10]=$false RCLK=clk_a1hz RCLKE=$true RDATA[0]=the_cpu.code_mem_rd[0] RDATA[1]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[1] RDATA[2]=the_cpu.code_mem_rd[1] RDATA[3]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[3] RDATA[4]=the_cpu.code_mem_rd[2] RDATA[5]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[5] RDATA[6]=the_cpu.code_mem_rd[3] RDATA[7]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[7] RDATA[8]=the_cpu.code_mem_rd[4] RDATA[9]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[9] RDATA[10]=the_cpu.code_mem_rd[5] RDATA[11]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[11] RDATA[12]=the_cpu.code_mem_rd[6] RDATA[13]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[13] RDATA[14]=the_cpu.code_mem_rd[7] RDATA[15]=$techmap5709\the_cpu.code_mem.0.0.1.A1DATA_16[15] RE=$true WADDR[0]=$false WADDR[1]=$false WADDR[2]=$false WADDR[3]=$false WADDR[4]=$false WADDR[5]=$false WADDR[6]=$false WADDR[7]=$false WADDR[8]=$false WADDR[9]=$false WADDR[10]=$false WCLK=$false WCLKE=$false WDATA[0]=$false WDATA[1]=$undef WDATA[2]=$false WDATA[3]=$undef WDATA[4]=$false WDATA[5]=$undef WDATA[6]=$false WDATA[7]=$undef WDATA[8]=$false WDATA[9]=$undef WDATA[10]=$false WDATA[11]=$undef WDATA[12]=$false WDATA[13]=$undef WDATA[14]=$false WDATA[15]=$undef WE=$true
 .attr src "/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:277|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:35"
-.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x0x1x0x1x0x0x1x1x0x1x0x1x0x0x0x1x0x1x0x0x1x1x1x1x1x1x1x1x1x0x1x1x0x1x0x0x1x0x1x1x0x1x0x0x1x0x0x1x0x1x0x0x0x1x1x1x0x1x0x0x0x1x0x0x0x0x0x0x0x1x1x1x0x1x0x0x0x0x0
+.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x0x1x0x1x0x0x1x1x0x1x0x1x0x0x0x1x0x1x0x0x0x1x0x1x0x1x0x0x1x1x0x1x0x1x0x0x1x0x1x1x0x1x0x0x1x0x0x1x0x1x0x0x0x1x1x1x0x1x0x0x0x1x0x0x0x0x0x0x0x1x1x1x0x1x0x0x0x0x0
 .param INIT_1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_3 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -4681,7 +4681,7 @@
 .param WRITE_MODE 00000000000000000000000000000001
 .gate SB_RAM40_4K MASK[0]=$undef MASK[1]=$undef MASK[2]=$undef MASK[3]=$undef MASK[4]=$undef MASK[5]=$undef MASK[6]=$undef MASK[7]=$undef MASK[8]=$undef MASK[9]=$undef MASK[10]=$undef MASK[11]=$undef MASK[12]=$undef MASK[13]=$undef MASK[14]=$undef MASK[15]=$undef RADDR[0]=$abc$21176$n2645 RADDR[1]=$abc$21176$n2647 RADDR[2]=$abc$21176$n2649 RADDR[3]=$abc$21176$n2651 RADDR[4]=$abc$21176$n2653 RADDR[5]=$abc$21176$n2655 RADDR[6]=$abc$21176$n2657 RADDR[7]=$abc$21176$n2659 RADDR[8]=$abc$21176$n2661 RADDR[9]=$false RADDR[10]=$false RCLK=clk_a1hz RCLKE=$true RDATA[0]=$auto$alumacc.cc:474:replace_alu$5298.AA[8] RDATA[1]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[1] RDATA[2]=$auto$alumacc.cc:474:replace_alu$5298.AA[9] RDATA[3]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[3] RDATA[4]=$auto$alumacc.cc:474:replace_alu$5298.AA[10] RDATA[5]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[5] RDATA[6]=$auto$alumacc.cc:474:replace_alu$5298.AA[11] RDATA[7]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[7] RDATA[8]=$auto$alumacc.cc:474:replace_alu$5298.AA[12] RDATA[9]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[9] RDATA[10]=$auto$alumacc.cc:474:replace_alu$5298.AA[13] RDATA[11]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[11] RDATA[12]=$auto$alumacc.cc:474:replace_alu$5298.AA[14] RDATA[13]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[13] RDATA[14]=$auto$alumacc.cc:474:replace_alu$5298.AA[15] RDATA[15]=$techmap5708\the_cpu.code_mem.1.0.0.A1DATA_16[15] RE=$true WADDR[0]=$false WADDR[1]=$false WADDR[2]=$false WADDR[3]=$false WADDR[4]=$false WADDR[5]=$false WADDR[6]=$false WADDR[7]=$false WADDR[8]=$false WADDR[9]=$false WADDR[10]=$false WCLK=$false WCLKE=$false WDATA[0]=$false WDATA[1]=$undef WDATA[2]=$false WDATA[3]=$undef WDATA[4]=$false WDATA[5]=$undef WDATA[6]=$false WDATA[7]=$undef WDATA[8]=$false WDATA[9]=$undef WDATA[10]=$false WDATA[11]=$undef WDATA[12]=$false WDATA[13]=$undef WDATA[14]=$false WDATA[15]=$undef WE=$true
 .attr src "/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:277|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:35"
-.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x1x1x1x1x1x1x1x1x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0
+.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0x0
 .param INIT_1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_3 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -4701,7 +4701,7 @@
 .param WRITE_MODE 00000000000000000000000000000001
 .gate SB_RAM40_4K MASK[0]=$undef MASK[1]=$undef MASK[2]=$undef MASK[3]=$undef MASK[4]=$undef MASK[5]=$undef MASK[6]=$undef MASK[7]=$undef MASK[8]=$undef MASK[9]=$undef MASK[10]=$undef MASK[11]=$undef MASK[12]=$undef MASK[13]=$undef MASK[14]=$undef MASK[15]=$undef RADDR[0]=$abc$21176$n2645 RADDR[1]=$abc$21176$n2647 RADDR[2]=$abc$21176$n2649 RADDR[3]=$abc$21176$n2651 RADDR[4]=$abc$21176$n2653 RADDR[5]=$abc$21176$n2655 RADDR[6]=$abc$21176$n2657 RADDR[7]=$abc$21176$n2659 RADDR[8]=$abc$21176$n2661 RADDR[9]=$false RADDR[10]=$false RCLK=clk_a1hz RCLKE=$true RDATA[0]=$auto$alumacc.cc:474:replace_alu$5298.AA[16] RDATA[1]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[1] RDATA[2]=$auto$alumacc.cc:474:replace_alu$5298.AA[17] RDATA[3]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[3] RDATA[4]=$auto$alumacc.cc:474:replace_alu$5298.AA[18] RDATA[5]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[5] RDATA[6]=$auto$alumacc.cc:474:replace_alu$5298.AA[19] RDATA[7]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[7] RDATA[8]=$auto$alumacc.cc:474:replace_alu$5298.AA[20] RDATA[9]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[9] RDATA[10]=$auto$alumacc.cc:474:replace_alu$5298.AA[21] RDATA[11]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[11] RDATA[12]=$auto$alumacc.cc:474:replace_alu$5298.AA[22] RDATA[13]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[13] RDATA[14]=$auto$alumacc.cc:474:replace_alu$5298.AA[23] RDATA[15]=$techmap5706\the_cpu.code_mem.2.0.0.A1DATA_16[15] RE=$true WADDR[0]=$false WADDR[1]=$false WADDR[2]=$false WADDR[3]=$false WADDR[4]=$false WADDR[5]=$false WADDR[6]=$false WADDR[7]=$false WADDR[8]=$false WADDR[9]=$false WADDR[10]=$false WCLK=$false WCLKE=$false WDATA[0]=$false WDATA[1]=$undef WDATA[2]=$false WDATA[3]=$undef WDATA[4]=$false WDATA[5]=$undef WDATA[6]=$false WDATA[7]=$undef WDATA[8]=$false WDATA[9]=$undef WDATA[10]=$false WDATA[11]=$undef WDATA[12]=$false WDATA[13]=$undef WDATA[14]=$false WDATA[15]=$undef WE=$true
 .attr src "/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:277|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:35"
-.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x1x1x1x1x1x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x0x0x0x0x0x0x0x0x1x1x0
+.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x1x1x1x0x0x0x0x0x0x0x0x0x0x0x0x0x1x1x0
 .param INIT_1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_3 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -4721,7 +4721,7 @@
 .param WRITE_MODE 00000000000000000000000000000001
 .gate SB_RAM40_4K MASK[0]=$undef MASK[1]=$undef MASK[2]=$undef MASK[3]=$undef MASK[4]=$undef MASK[5]=$undef MASK[6]=$undef MASK[7]=$undef MASK[8]=$undef MASK[9]=$undef MASK[10]=$undef MASK[11]=$undef MASK[12]=$undef MASK[13]=$undef MASK[14]=$undef MASK[15]=$undef RADDR[0]=$abc$21176$n2645 RADDR[1]=$abc$21176$n2647 RADDR[2]=$abc$21176$n2649 RADDR[3]=$abc$21176$n2651 RADDR[4]=$abc$21176$n2653 RADDR[5]=$abc$21176$n2655 RADDR[6]=$abc$21176$n2657 RADDR[7]=$abc$21176$n2659 RADDR[8]=$abc$21176$n2661 RADDR[9]=$false RADDR[10]=$false RCLK=clk_a1hz RCLKE=$true RDATA[0]=$auto$alumacc.cc:474:replace_alu$5298.AA[24] RDATA[1]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[1] RDATA[2]=$abc$21176$n3239 RDATA[3]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[3] RDATA[4]=$abc$21176$n3386 RDATA[5]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[5] RDATA[6]=$abc$21176$n1420 RDATA[7]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[7] RDATA[8]=$abc$21176$n3387 RDATA[9]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[9] RDATA[10]=$abc$21176$n1423 RDATA[11]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[11] RDATA[12]=$abc$21176$n1425 RDATA[13]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[13] RDATA[14]=$abc$21176$n1426 RDATA[15]=$techmap5713\the_cpu.code_mem.3.0.0.A1DATA_16[15] RE=$true WADDR[0]=$false WADDR[1]=$false WADDR[2]=$false WADDR[3]=$false WADDR[4]=$false WADDR[5]=$false WADDR[6]=$false WADDR[7]=$false WADDR[8]=$false WADDR[9]=$false WADDR[10]=$false WCLK=$false WCLKE=$false WDATA[0]=$false WDATA[1]=$undef WDATA[2]=$false WDATA[3]=$undef WDATA[4]=$false WDATA[5]=$undef WDATA[6]=$false WDATA[7]=$undef WDATA[8]=$false WDATA[9]=$undef WDATA[10]=$false WDATA[11]=$undef WDATA[12]=$false WDATA[13]=$undef WDATA[14]=$false WDATA[15]=$undef WE=$true
 .attr src "/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:277|/Users/doruk/.apio/packages/toolchain-icestorm/bin/../share/yosys/ice40/brams_map.v:35"
-.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x0x0x0x0x0x1x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x0x0x0x1x0x1x0x0x1x0x0x0x1x0x1x1
+.param INIT_0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x1x0x0x0x1x0x1x1x0x0x0x1x0x1x0x0x1x0x0x0x1x0x1x1
 .param INIT_1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 .param INIT_3 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -7,7 +7,7 @@ module cpu(
     output wire [7:0] debug_port3
     );
 
-    //this part has to do with memory, not related to lab 1 up to line 36
+    //this part has to do with memory
     localparam data_width = 32;
     localparam data_width_l2b = $clog2(data_width / 8);
     localparam data_words = 512;
@@ -27,13 +27,13 @@ module cpu(
     end
 
     localparam code_width = 32;
-    localparam code_width_l2b = $clog2(data_width / 8);
+    localparam code_width_l2b = $clog2(data_width / 8); //2
     localparam code_words = 512;
-    localparam code_words_l2 = $clog2(data_words);
-    localparam code_addr_width = code_words_l2 - code_width_l2b;
+    localparam code_words_l2 = $clog2(data_words); //9
+    localparam code_addr_width = code_words_l2 - code_width_l2b; //7
     reg [code_width - 1:0]  code_mem[data_words - 1:0];
     reg [code_width - 1:0]  code_mem_rd;
-    wire [code_addr_width - 1:0] code_addr;
+    wire [code_addr_width - 1:0] code_addr; //7-bit
 
     //instructions go here, each code_mem is an instrcution to be decoded
     initial begin
@@ -53,7 +53,7 @@ module cpu(
         code_mem_rd <= code_mem[code_addr];
     end
 
-    reg [29:0]  pc;
+    reg [29:0] pc;
 
     assign led = pc[1]; // make the LED blink on the low order bit of the PC
 
@@ -62,7 +62,7 @@ module cpu(
     assign debug_port2 = rf_d1[7:0];        //read from register - 1, should be same as rf_d2[7:0]
     assign debug_port3 = code_mem_rd[7:0];  //read from code memory
 
-    assign code_addr = pc[code_addr_width - 1:0];
+    assign code_addr = pc[code_addr_width - 1:0]; //7-bit
 
     //the register file is created here
     reg [31:0] rf[0:31];
@@ -97,7 +97,16 @@ module cpu(
         data_mem_we <= 0;
         if (!resetn) begin
             pc <= 0;
+            //state <= reseted
+            //count <= 0
         end
+        //if (state == reseted) begin
+        //  if (count <= 15) begin
+        //      data_mem_we <= 1;
+        //      data_mem_wd <= count;
+        //      data_mem_wd <= 0;
+        //  end
+        //end
         else begin
             data_addr <= pc;
 
@@ -122,18 +131,20 @@ module cpu(
     end
 endmodule
 
-module cpu_testbench()
-    wire clk, resetn, led;
-    wire [7:0] debug_port1, debug_port2, debug_port3;
-
-    parameter CLOCK_PERIOD=100;
-    initial begin
-        clk <= 0;
-        forever #(CLOCK_PERIOD/2) clk <= ~clk;
-    end
-
-    initial begin
-        resetn <= 0;            @(posedge clk);
-        resetn <= 1; repeat(40) @(posedge clk);
-    end
-endmodule
+// module cpu_testbench()
+//     wire clk, resetn, led;
+//     wire [7:0] debug_port1, debug_port2, debug_port3;
+//
+//     cpu dut (.clk(), .resetn(), .led(), .debug_port1(), .debug_port2(), .debug_port3());
+//
+//     parameter CLOCK_PERIOD=100;
+//     initial begin
+//         clk <= 0;
+//         forever #(CLOCK_PERIOD/2) clk <= ~clk;
+//     end
+//
+//     initial begin
+//         resetn <= 0;            @(posedge clk);
+//         resetn <= 1; repeat(40) @(posedge clk);
+//     end
+// endmodule
