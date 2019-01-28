@@ -121,3 +121,19 @@ module cpu(
         end
     end
 endmodule
+
+module cpu_testbench()
+    wire clk, resetn, led;
+    wire [7:0] debug_port1, debug_port2, debug_port3;
+
+    parameter CLOCK_PERIOD=100;
+    initial begin
+        clk <= 0;
+        forever #(CLOCK_PERIOD/2) clk <= ~clk;
+    end
+
+    initial begin
+        resetn <= 0;            @(posedge clk);
+        resetn <= 1; repeat(40) @(posedge clk);
+    end
+endmodule
