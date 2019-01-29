@@ -47,6 +47,8 @@ module cpu(
         code_mem[7] = 32'b000101_11111111111111111111111101;    //BRANCH: set to jump by -3, debug output FD
         code_mem[8] = 32'b10001011000_00111_000000_00101_01000; //ADD(458): debug output A8
         code_mem[9] = 32'b10001011000_00111_000000_00101_01001; //ADD(458): debug output A9
+        code_mem[10] = 32'b000101_00000000000000000000000000; //BRANCH: pointing back to 0
+
     end
 
     always @(posedge clk) begin
@@ -119,23 +121,25 @@ module cpu(
             // rf_wd <= code_mem_rd;
 
             // program counter
-            if (pc > 9)
-                pc <= 0;
+            // program counter
+			if(code_mem[pc][31:26] == 6'b000101 & code_mem[pc][25:0] == 26'b0) //check if opcode is a branch going back to 0
+				pc <= 0;
             else if(code_mem[pc][31:26] == 6'b000101 & code_mem[pc][25] == 1'b0) //check if opcode is branch with positive jump
                 pc <= pc + (1 * (code_mem[pc][25:0]));
             else if(code_mem[pc][31:26] == 6'b000101 & code_mem[pc][25] == 1'b1) //check if opcode is branch with negative jump
-                pc <= pc - (1 * (-code_mem[pc][25:0]));
+                pc <= pc + (1 * {4'b1111, code_mem[pc][25:0]}); //code_mem[pc][2:0]) ); //101
             else // if opcode is ADD then only increment by one
                 pc <= pc + 1;   //rf_d1 + rf_d2 + 1;
         end
     end
 endmodule
 
-// module cpu_testbench()
-//     wire clk, resetn, led;
+// module cpu_testbench();
+//     reg clk, resetn;
+//     wire led;
 //     wire [7:0] debug_port1, debug_port2, debug_port3;
 //
-//     cpu dut (.clk(), .resetn(), .led(), .debug_port1(), .debug_port2(), .debug_port3());
+//     cpu dut (.clk(clk), .resetn(resetn), .led(led), .debug_port1(debug_port1), .debug_port2(debug_port2), .debug_port3(debug_port3));
 //
 //     parameter CLOCK_PERIOD=100;
 //     initial begin
@@ -144,7 +148,8 @@ endmodule
 //     end
 //
 //     initial begin
-//         resetn <= 0;            @(posedge clk);
+//         resetn <= 0; repeat (3) @(posedge clk);
 //         resetn <= 1; repeat(40) @(posedge clk);
+//         $stop;
 //     end
 // endmodule
