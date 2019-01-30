@@ -88,7 +88,7 @@ module cpu(
     always @(posedge clk) begin
         rf_d1 <= rf[rf_rs1];
         rf_d2 <= rf[rf_rs2];
-        if (!resetn && rf_we)
+        if (resetn && rf_we)
             rf[rf_ws] <= rf_wd;
     end
 
