@@ -14,8 +14,9 @@ This cpu design is implemented by Doruk Arisoy and Ben Eastin.
     - [ ] memory
     - [ ] write to a register
     - [ ] implement ALU
-    - [ ] implement 12 instructions,
+    - [ ] implement 12 instructions:
         - [ ] 3 branches: unconditional, some kind of conditional, branch link
+        - [ ] add 'add r1, r2, r3', addi 'add r1, r2, #1'
 + Lab 3:
     - [ ] pipelining will be implemented
     - [ ] read Chapter 4.5-6 on textbook
