@@ -6,7 +6,7 @@ This cpu design is implemented by Doruk Arisoy and Ben Eastin.
 
 **To Do list:**
 + Lab 1:
-    -[x] register file
+    - [x] register file
     - [x] read a register
     - [x] program counter
     - [ ] compare code with solution, perform fixes
