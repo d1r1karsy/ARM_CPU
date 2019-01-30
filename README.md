@@ -4,7 +4,7 @@ Class project for UW CSE/EE 469: Computer Architecture I with Mark Oskin.
 This cpu design is implemented by Doruk Arisoy and Ben Eastin.
 
 
-**To Do list:**
+######To Do list:
 + Lab 1:
     - [x] register file
     - [x] read a register
