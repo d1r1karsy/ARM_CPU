@@ -21,9 +21,9 @@ module cpu(
     reg data_mem_we;
 
     always @(posedge clk) begin
-    if (data_mem_we)
-        data_mem[data_addr] <= data_mem_wd;
-    data_mem_rd <= data_mem[data_addr];
+        if (data_mem_we)
+            data_mem[data_addr] <= data_mem_wd;
+        data_mem_rd <= data_mem[data_addr];
     end
 
     localparam code_width = 32;
@@ -48,7 +48,6 @@ module cpu(
         code_mem[8] = 32'b10001011000_00111_000000_00101_01000; //ADD(458): debug output A8
         code_mem[9] = 32'b10001011000_00111_000000_00101_01001; //ADD(458): debug output A9
         code_mem[10] = 32'b000101_00000000000000000000000000; //BRANCH: pointing back to 0
-
     end
 
     always @(posedge clk) begin
