@@ -1,4 +1,4 @@
-module cpu(
+module lab1(
     input wire clk,
     input wire resetn,
     output wire led,
@@ -134,7 +134,7 @@ module cpu(
     end
 endmodule
 
-// module cpu_testbench();
+// module lab1_testbench();
 //     reg clk, resetn;
 //     wire led;
 //     wire [7:0] debug_port1, debug_port2, debug_port3;
