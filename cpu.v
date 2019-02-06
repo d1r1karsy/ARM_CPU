@@ -16,6 +16,7 @@ module cpu(
     wire [code_addr_width - 1:0] code_addr;
 
     //instructions
+    //only 8-instructions for asynch
     initial begin
         code_mem[0] = 32'b1110_000_0100_0_0010_0010_00000000_0001;  // ADD r2, r2, r1
         code_mem[1] = 32'b1110_101_0_11111111_11111111_11111101;   // branch -12 which is PC = (PC + 8) - 12 = PC - 4
@@ -161,15 +162,16 @@ module cpu(
     endfunction
 
     //memory constants and values from instruction (if applicable)
+    //32-words for asynch
     localparam data_width = 32;
     localparam data_width_l2b = $clog2(data_width / 8);
-    localparam data_words = 512;
+    localparam data_words = 32;
     localparam data_words_l2 = $clog2(data_words);
     localparam data_addr_width = data_words_l2;
-    reg [data_width - 1:0]  data_mem[data_words - 1:0];
-    reg [data_width - 1:0]  data_mem_rd;
-    reg [data_width - 1:0]  data_mem_wd;
-    reg [data_addr_width - 1:0] data_addr;
+    reg [data_width - 1:0]       data_mem[data_words - 1:0];
+    reg [data_width - 1:0]       data_mem_rd;
+    reg [data_width - 1:0]       data_mem_wd;
+    reg [data_addr_width - 1:0]  data_addr;
     reg data_mem_we;
     function automatic inst_index_bit; //pre/post indexing bit: dont worry
         input [31:0]  inst;
@@ -190,6 +192,10 @@ module cpu(
     function automatic inst_losto_bit; //load/store bit
         input [31:0]  inst;
         inst_losto_bit = inst[23];
+    endfunction
+    function automatic [11:0] inst_memoff;
+        input [31:0] inst;
+        inst_memoff = inst[11:0];
     endfunction
 
 //------execution of intructions are done after this portion--------
@@ -247,7 +253,7 @@ module cpu(
     always @(*) begin
         alu_result = 32'h0000_0000;
         case (inst_opcode(inst))
-            opcode_add: alu_result = rf_d1 + operand2;
+            opcode_add: alu_result = rf_d1 + operand2; //update cpsr values
             //add more operations here
         endcase
         rf_wd = alu_result;
@@ -289,8 +295,8 @@ module cpu(
     //load/store to memory
     always @(posedge clk) begin
         if (data_mem_we)
-            data_mem[inst_rd] <= inst_rn;
-        data_mem_rd <= data_mem[inst_rd];
+            data_mem[data_addr] <= inst_rn;
+        data_mem_rd <= data_mem[data_addr];
     end
 
 endmodule
