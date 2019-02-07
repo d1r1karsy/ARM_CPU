@@ -18,9 +18,15 @@ module cpu(
     //instructions
     //only 8-instructions for asynch
     initial begin
+        rf[2] = 32'b00000000000000000000000000000111; //7
+        rf[3] = 32'b00000000000000000000000000001111; //15
+        data_mem[10010] = 32'b00000000000000000000000000010111; //17 //1f
         code_mem[0] = 32'b1110_000_0100_0_0010_0010_00000000_0001;  // ADD r2, r2, r1
-        code_mem[1] = 32'b1110_101_0_11111111_11111111_11111101;   // branch -12 which is PC = (PC + 8) - 12 = PC - 4
-        code_mem[2] = 32'b1110_101_1_11111111_11111111_11111101; //branch with link (write current PC into R14)
+        //code_mem[1] = 32'b1110_101_0_11111111_11111111_11111101;   // branch -12 which is PC = (PC + 8) - 12 = PC - 4
+        //code_mem[1] = 32'b1110_101_1_11111111_11111111_11111101; //branch with link (write current PC into R14)
+        code_mem[1] = 32'b1110_01_00000_0_0010_0010_000000000001; //store
+        code_mem[2] = 32'b1110_01_00000_1_0010_0010_000000000001; //load
+        code_mem[3] = 32'b1110_101_0_11111111_11111111_11111011;   // branch -20 which is PC = (PC + 8) - 20 = PC - 12
     end
 
     //program counter variables
@@ -33,7 +39,7 @@ module cpu(
     //debug port outputs
     assign debug_port1 = pc[9:2];
     assign debug_port2 = code_mem_rd[7:0];
-    assign debug_port3 = rf_d1[7:0];
+    assign debug_port3 = data_mem_rd[7:0];
 
     reg [31:0] rf[0:14];  // register 15 is the pc
     initial begin
@@ -162,7 +168,6 @@ module cpu(
     endfunction
 
     //memory constants and values from instruction (if applicable)
-    //32-words for asynch
     localparam data_width = 32;
     localparam data_width_l2b = $clog2(data_width / 8);
     localparam data_words = 32;
@@ -177,7 +182,7 @@ module cpu(
         input [31:0]  inst;
         inst_index_bit = inst[24];
     endfunction
-    function automatic inst_updown_bit; //up/down bit
+    function automatic inst_updown_bit; //up/down bit: dont worry
         input [31:0]  inst;
         inst_updown_bit = inst[23];
     endfunction
@@ -193,9 +198,9 @@ module cpu(
         input [31:0]  inst;
         inst_losto_bit = inst[23];
     endfunction
-    function automatic [11:0] inst_memoff;
+    function automatic [11:0] inst_memoff; //memory offset
         input [31:0] inst;
-        inst_memoff = inst[11:0];
+        inst_memoff = inst[4:0];
     endfunction
 
 //------execution of intructions are done after this portion--------
@@ -218,16 +223,19 @@ module cpu(
 
     // "Decode" what gets read and written
     always @(*) begin
+        //branch with link: save PC to R14
+        if (inst_branch_islink(inst))  rf_ws = r14;
+        else                           rf_ws  = inst_rd(inst);
         rf_rs1 = inst_rn(inst);
         rf_rs2 = inst_rm(inst);
-        rf_ws = inst_rd(inst);
     end
 
     // "Decode" whether we write the register file
     always @(*) begin
         rf_we = 1'b0;
         case (inst_type(inst))
-            inst_type_branch: rf_we = 1'b0;
+            //if branch is link, write enable
+            inst_type_branch: if (inst_branch_islink(inst)) rf_we = 1'b1; else rf_we = 1'b0;
             inst_type_data_proc: if (inst_cond(inst) == cond_al) rf_we = 1'b1;
         endcase
     end
@@ -238,7 +246,9 @@ module cpu(
         case (inst_type(inst))
             inst_type_branch:     data_mem_we = 1'b0;
             inst_type_data_proc:  data_mem_we = 1'b0;
-            inst_type_data_trans: if (!inst_losto_bit) data_mem_we = 1'b1;
+            inst_type_data_trans: if (!inst_losto_bit
+                (inst)) data_mem_we = 1'b1;
+                                  else data_mem_we = 1'b0;
         endcase
     end
 
@@ -256,7 +266,10 @@ module cpu(
             opcode_add: alu_result = rf_d1 + operand2; //update cpsr values
             //add more operations here
         endcase
-        rf_wd = alu_result;
+        //calculate data address
+        if (inst_type(inst) == inst_type_data_trans) data_addr = rf_d1[4:0] + inst_memoff(inst);
+        if (inst_branch_islink(inst)) rf_wd = pc + 4;
+        else                          rf_wd = alu_result;
     end
 
     // "Write back" the instruction
@@ -266,21 +279,13 @@ module cpu(
                 rf[rf_ws] <= rf_wd;
     end
 
-    //branch with link: save PC to R14
-    always @(*) begin
-        if (inst_branch_islink) begin
-            rf_ws = r14;
-            rf_we = 1'b1;
-            rf_wd = pc;
-        end
-    end
-
     // incrament PC
     always @(posedge clk) begin
         if (!nreset)
             pc <= 32'd0;
         else begin
             // default behavior
+            //synchronous: create write enable signal
             pc <= pc + 4;
 
             if (inst_type(inst) == inst_type_branch) begin
@@ -294,8 +299,10 @@ module cpu(
 
     //load/store to memory
     always @(posedge clk) begin
-        if (data_mem_we)
-            data_mem[data_addr] <= inst_rn;
+        if (data_mem_we) begin
+            rf_s1 <= inst_rn(inst);
+            data_mem[data_addr] <= rf_d1;
+        end
         data_mem_rd <= data_mem[data_addr];
     end
 

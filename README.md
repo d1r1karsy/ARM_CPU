@@ -17,8 +17,8 @@ The Verilog code for the CPU design is at <code>cpu.v</code> and the top level m
         - [ ] conditional flags and execution: conditional branch (cmp)
         - [x] branch link
         - [ ] arithmetic instruction like: add `add r1, r2, r3`, addi `add r1, r2, #1`
-        - [ ] load a word from memory: up/down bit, data_addr (5-bits)
-        - [ ] store a word to memory:  up/down bit, data_addr (5-bits)
+        - [x] load a word from memory
+        - [x] store a word to memory
 + **Lab 3**:
     - [ ] pipelining will be implemented
 
