@@ -5,7 +5,7 @@ This cpu design is implemented by Doruk Arisoy and Ben Eastin.
 
 The Verilog code for the CPU design is at <code>cpu.v</code> and the top level module for the project is <code>top.v</code>.
 
-**To Do list:**
+## To Do List:
 + **Lab 1**:
     - [x] register file
     - [x] read a register
@@ -14,14 +14,17 @@ The Verilog code for the CPU design is at <code>cpu.v</code> and the top level m
 + **Lab 2**:
     - [ ] implement 12 instructions (complete single cycle ARM32):
         - [x] unconditional branch
-        - [ ] conditional flags and execution: conditional branch (cmp)
+        - [x] conditional branch
         - [x] branch link
-        - [ ] arithmetic instruction like: add `add r1, r2, r3`, addi `add r1, r2, #1`
+        - [x] arithmetic instructions
         - [x] load a word from memory
         - [x] store a word to memory
+        - [ ] testing of conditional branch, branch link and arithmetic instructions.
 + **Lab 3**:
     - [ ] pipelining will be implemented
 
+
+## Set Up
 
 To run this cpu design on the TinyFPGA Bx follow [this tutorial](https://tinyfpga.com/bx/guide.html)
 

@@ -151,9 +151,9 @@ module cpu(
     localparam opcode_sub  = 4'b0010; //Op1 - Op2
     localparam opcode_rsb  = 4'b0011; //Op2 - Op1
     localparam opcode_add  = 4'b0100; //Op1 + Op2
-    localparam opcode_adc  = 4'b0101; //Op1 + Op2 + C
-    localparam opcode_sbc  = 4'b0110; //Op1 - Op2 + C - 1
-    localparam opcode_rsc  = 4'b0111; //Op2 - Op1 + C - 1
+    localparam opcode_adc  = 4'b0101; //Op1 + Op2 + Carry
+    localparam opcode_sbc  = 4'b0110; //Op1 - Op2 + Carry - 1
+    localparam opcode_rsc  = 4'b0111; //Op2 - Op1 + Carry - 1
     localparam opcode_tst  = 4'b1000; //set condition codes on Op1 AND Op2
     localparam opcode_teq  = 4'b1001; //set condition codes on Op1 EOR Op2
     localparam opcode_cmp  = 4'b1010; //set condition codes on Op1 - Op2
@@ -237,6 +237,9 @@ module cpu(
             //if branch is link, write enable
             inst_type_branch: if (inst_branch_islink(inst)) rf_we = 1'b1; else rf_we = 1'b0;
             inst_type_data_proc: if (inst_cond(inst) == cond_al) rf_we = 1'b1;
+            inst_type_data_trans: if (inst_losto_bit
+                (inst)) rf_we = 1'b1;
+                                  else rf_we = 1'b0;
         endcase
     end
 
@@ -262,9 +265,55 @@ module cpu(
     reg [31:0] alu_result;
     always @(*) begin
         alu_result = 32'h0000_0000;
+        if (!nreset) begin
+            cpsr[cpsr_n] = 1'b0;
+            cpsr[cpsr_z] = 1'b0;
+            cpsr[cpsr_c] = 1'b0;
+            cpsr[cpsr_v] = 1'b0;
+        end
         case (inst_opcode(inst))
-            opcode_add: alu_result = rf_d1 + operand2; //update cpsr values
-            //add more operations here
+            opcode_and: alu_result = rf_d1 & operand2;
+            opcode_eor: alu_result = rf_d1 ^ operand2;
+            opcode_sub: alu_result = rf_d1 - operand2;
+            opcode_rsb: alu_result = operand2 - rf_d1;
+            opcode_add: alu_result = rf_d1 + operand2;
+            opcode_adc: alu_result = rf_d1 + operand2 + cpsr_c;
+            opcode_sbc: alu_result = rf_d1 - operand2 + cpsr_c - 1;
+            opcode_rsc: alu_result = operand2 - rf_d1 + cpsr_c - 1;
+            opcode_tst: begin
+                            cpsr[cpsr_n] = (rf_d1 & operand2) < 0;
+                            cpsr[cpsr_z] = (rf_d1 & operand2) == 0;
+                            cpsr[cpsr_c] = (rf_d1 & operand2) > 32{1'b1};
+                            cpsr[cpsr_v] = (rf_d1 & operand2) > 32'h7fffffff};
+                        end
+            opcode_teq: begin
+                            cpsr[cpsr_n] = (rf_d1 ^ operand2) < 0;
+                            cpsr[cpsr_z] = (rf_d1 ^ operand2) == 0;
+                            cpsr[cpsr_c] = (rf_d1 ^ operand2) > 32{1'b1};
+                            cpsr[cpsr_v] = (rf_d1 ^ operand2) > 32'h7fffffff};
+                        end
+            opcode_cmp: begin
+                            cpsr[cpsr_n] = (rf_d1 - operand2) < 0;
+                            cpsr[cpsr_z] = (rf_d1 - operand2) == 0;
+                            cpsr[cpsr_c] = (rf_d1 - operand2) > 32{1'b1};
+                            cpsr[cpsr_v] = (rf_d1 - operand2) > 32'h7fffffff};
+                        end
+            opcode_cmpn:begin
+                            cpsr[cpsr_n] = (rf_d1 + operand2) < 0;
+                            cpsr[cpsr_z] = (rf_d1 + operand2) == 0;
+                            cpsr[cpsr_c] = (rf_d1 - operand2) > 32{1'b1};
+                            cpsr[cpsr_v] = (rf_d1 - operand2) > 32'h7fffffff};
+                        end
+            opcode_orr: alu_result = rf_d1 | operand2;
+            opcode_mov: alu_result = operand2;
+            opcode_bic: begin
+                            alu_result = rf_d1 & ~operand2;
+                            cpsr[cpsr_n] = 1'b0;
+                            cpsr[cpsr_z] = 1'b0;
+                            cpsr[cpsr_c] = 1'b0;
+                            cpsr[cpsr_v] = 1'b0;
+                        end
+            opcode_mvn: alu_result = ~operand2;
         endcase
         //calculate data address
         if (inst_type(inst) == inst_type_data_trans) data_addr = rf_d1[4:0] + inst_memoff(inst);
@@ -290,6 +339,20 @@ module cpu(
 
             if (inst_type(inst) == inst_type_branch) begin
                 case (inst_cond(inst))
+                    cond_eq: (cpsr[cpsr_z] == 1'b1) pc <= branch_target: pc <= pc + 4;
+                    cond_ne: (cpsr[cpsr_z] == 1'b0) pc <= branch_target: pc <= pc + 4;
+                    cond_cs: (cpsr[cpsr_c] == 1'b1) pc <= branch_target: pc <= pc + 4;
+                    cond_cc: (cpsr[cpsr_c] == 1'b0) pc <= branch_target: pc <= pc + 4;
+                    cond_ns: (cpsr[cpsr_n] == 1'b1) pc <= branch_target: pc <= pc + 4;
+                    cond_nc: (cpsr[cpsr_n] == 1'b0) pc <= branch_target: pc <= pc + 4;
+                    cond_vs: (cpsr[cpsr_v] == 1'b1) pc <= branch_target: pc <= pc + 4;
+                    cond_vc: (cpsr[cpsr_v] == 1'b0) pc <= branch_target: pc <= pc + 4;
+                    cond_hi: ((cpsr[cpsr_c] == 1) & (cpsr[cpsr_z] == 0)) pc <= branch_target: pc <= pc + 4;
+                    cond_ls: ((cpsr[cpsr_c] == 1) | (cpsr[cpsr_z] == 0)) pc <= branch_target: pc <= pc + 4;
+                    cond_ge: (cpsr[cpsr_n] == cpsr_v) pc <= branch_target: pc <= pc + 4;
+                    cond_lt: (cpsr[cpsr_n] != cpsr_v) pc <= branch_target: pc <= pc + 4;
+                    cond_gt: ((cpsr[cpsr_z] == 0) & (cpsr[cpsr_n] == cpsr[cpsr_v])) pc <= branch_target: pc <= pc + 4;
+                    cond_le: ((cpsr[cpsr_z] == 1) | (cpsr[cpsr_n] != cpsr[cpsr_v])) pc <= branch_target: pc <= pc + 4;
                     cond_al:  pc <= branch_target;
                 endcase
                 pc <= branch_target;
