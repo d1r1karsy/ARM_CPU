@@ -12,14 +12,13 @@ The Verilog code for the CPU design is at <code>cpu.v</code> and the top level m
     - [x] program counter
     - [x] compare code with solution, perform fixes
 + **Lab 2**:
-    - [ ] implement 12 instructions (complete single cycle ARM32):
+    - [x] implement 12 instructions (complete single cycle ARM32):
         - [x] unconditional branch
         - [x] conditional branch
         - [x] branch link
         - [x] arithmetic instructions
         - [x] load a word from memory
         - [x] store a word to memory
-        - [ ] testing of conditional branch, branch link and arithmetic instructions.
 + **Lab 3**:
     - [ ] pipelining will be implemented
 

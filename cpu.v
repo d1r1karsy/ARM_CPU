@@ -16,20 +16,17 @@ module cpu(
     wire [code_addr_width - 1:0] code_addr;
 
     //instructions
-    //only 8-instructions for asynch
+    //only 8-instructions for lab2
     initial begin
-        rf[2] = 32'b00000000000000000000000000000111; //7
-        rf[3] = 32'b00000000000000000000000000001111; //15
-        data_mem[10010] = 32'b00000000000000000000000000010111; //17 //1f
-        code_mem[0] = 32'b1110_000_0100_0_0010_0010_00000000_0001;  // ADD r2, r2, r1
-        //code_mem[1] = 32'b1110_101_0_11111111_11111111_11111101;   // branch -12 which is PC = (PC + 8) - 12 = PC - 4
-        //code_mem[1] = 32'b1110_101_1_11111111_11111111_11111101; //branch with link (write current PC into R14)
-        code_mem[1] = 32'b1110_01_00000_0_0010_0010_000000000001; //store
-        code_mem[2] = 32'b1110_01_00000_1_0010_0010_000000000001; //load
-        code_mem[3] = 32'b1110_101_0_11111111_11111111_11111011;   // branch -20 which is PC = (PC + 8) - 20 = PC - 12
+        code_mem[0] = 32'b1110_00_1_1101_0_0010_0010_00000000_0111; // MOV r2, #7
+        code_mem[1] = 32'b1110_00_1_0100_0_0010_0010_00000000_0010; // ADD r2, r2, #2
+        code_mem[2] = 32'b1110_00_1_1010_1_0010_0000_00000000_0111; // CMP r2, #9
+        code_mem[3] = 32'b0000_101_0_11111111_11111111_11111011;  // conditional branch, B.EQ -3
+        code_mem[4] = 32'b1110_01_00000_0_0010_0010_000000000001; // STR r2
+        code_mem[5] = 32'b1110_01_00000_1_0010_0010_000000000001; // LDR r2
+        code_mem[6] = 32'b1110_101_1_11111111_11111111_11111000;  // branch with link PC = (PC + 8) - 32 = PC - 24
     end
 
-    //program counter variables
     reg [code_width - 1:0]  pc;
     assign code_addr = pc[code_addr_width - 1 + 2:2];
     assign code_mem_rd = code_mem[code_addr];
@@ -38,13 +35,13 @@ module cpu(
 
     //debug port outputs
     assign debug_port1 = pc[9:2];
-    assign debug_port2 = code_mem_rd[7:0];
-    assign debug_port3 = data_mem_rd[7:0];
+    assign debug_port2 = rf[2]; //code_mem_rd[7:0];
+    assign debug_port3 = operand2; //rf[3];
 
     reg [31:0] rf[0:14];  // register 15 is the pc
-    initial begin
-        rf[1] <= 32'd1;     // for testing
-    end
+    // initial begin
+    //     rf[1] <= 32'd1;     // for testing
+    // end
     localparam r15 = 4'b1111;
     localparam r14 = 4'b1110;
 
@@ -218,13 +215,13 @@ module cpu(
         // For now, we only support R type unshifted instructions.
         // shifts and such are NOT implemented.
         if (operand2_type(inst) == operand2_is_reg) operand2 = rf_d2;
-        else operand2 = inst_data_proc_imm(inst);
+        else operand2 = {24'b000000000000000000000000, inst_data_proc_imm(inst)};
     end
 
     // "Decode" what gets read and written
     always @(*) begin
         //branch with link: save PC to R14
-        if (inst_branch_islink(inst))  rf_ws = r14;
+        if (inst_branch_islink(inst) & (inst_type(inst) == inst_type_branch))  rf_ws = r14;
         else                           rf_ws  = inst_rd(inst);
         rf_rs1 = inst_rn(inst);
         rf_rs2 = inst_rm(inst);
@@ -237,8 +234,7 @@ module cpu(
             //if branch is link, write enable
             inst_type_branch: if (inst_branch_islink(inst)) rf_we = 1'b1; else rf_we = 1'b0;
             inst_type_data_proc: if (inst_cond(inst) == cond_al) rf_we = 1'b1;
-            inst_type_data_trans: if (inst_losto_bit
-                (inst)) rf_we = 1'b1;
+            inst_type_data_trans: if (inst_losto_bit(inst)) rf_we = 1'b1;
                                   else rf_we = 1'b0;
         endcase
     end
@@ -249,9 +245,8 @@ module cpu(
         case (inst_type(inst))
             inst_type_branch:     data_mem_we = 1'b0;
             inst_type_data_proc:  data_mem_we = 1'b0;
-            inst_type_data_trans: if (!inst_losto_bit
-                (inst)) data_mem_we = 1'b1;
-                                  else data_mem_we = 1'b0;
+            inst_type_data_trans: if (!inst_losto_bit(inst)) data_mem_we = 1'b1;
+                                  else                       data_mem_we = 1'b0;
         endcase
     end
 
@@ -265,12 +260,6 @@ module cpu(
     reg [31:0] alu_result;
     always @(*) begin
         alu_result = 32'h0000_0000;
-        if (!nreset) begin
-            cpsr[cpsr_n] = 1'b0;
-            cpsr[cpsr_z] = 1'b0;
-            cpsr[cpsr_c] = 1'b0;
-            cpsr[cpsr_v] = 1'b0;
-        end
         case (inst_opcode(inst))
             opcode_and: alu_result = rf_d1 & operand2;
             opcode_eor: alu_result = rf_d1 ^ operand2;
@@ -283,26 +272,26 @@ module cpu(
             opcode_tst: begin
                             cpsr[cpsr_n] = (rf_d1 & operand2) < 0;
                             cpsr[cpsr_z] = (rf_d1 & operand2) == 0;
-                            cpsr[cpsr_c] = (rf_d1 & operand2) > 32{1'b1};
-                            cpsr[cpsr_v] = (rf_d1 & operand2) > 32'h7fffffff};
+                            cpsr[cpsr_c] = (rf_d1 & operand2) > 32'b11111111111111111111111111111111;
+                            cpsr[cpsr_v] = (rf_d1 & operand2) > 32'h7fffffff;
                         end
             opcode_teq: begin
                             cpsr[cpsr_n] = (rf_d1 ^ operand2) < 0;
                             cpsr[cpsr_z] = (rf_d1 ^ operand2) == 0;
-                            cpsr[cpsr_c] = (rf_d1 ^ operand2) > 32{1'b1};
-                            cpsr[cpsr_v] = (rf_d1 ^ operand2) > 32'h7fffffff};
+                            cpsr[cpsr_c] = (rf_d1 ^ operand2) > 32'b11111111111111111111111111111111;
+                            cpsr[cpsr_v] = (rf_d1 ^ operand2) > 32'h7fffffff;
                         end
             opcode_cmp: begin
                             cpsr[cpsr_n] = (rf_d1 - operand2) < 0;
                             cpsr[cpsr_z] = (rf_d1 - operand2) == 0;
-                            cpsr[cpsr_c] = (rf_d1 - operand2) > 32{1'b1};
-                            cpsr[cpsr_v] = (rf_d1 - operand2) > 32'h7fffffff};
+                            cpsr[cpsr_c] = (rf_d1 - operand2) > 32'b11111111111111111111111111111111;
+                            cpsr[cpsr_v] = (rf_d1 - operand2) > 32'h7fffffff;
                         end
             opcode_cmpn:begin
                             cpsr[cpsr_n] = (rf_d1 + operand2) < 0;
                             cpsr[cpsr_z] = (rf_d1 + operand2) == 0;
-                            cpsr[cpsr_c] = (rf_d1 - operand2) > 32{1'b1};
-                            cpsr[cpsr_v] = (rf_d1 - operand2) > 32'h7fffffff};
+                            cpsr[cpsr_c] = (rf_d1 - operand2) > 32'b11111111111111111111111111111111;
+                            cpsr[cpsr_v] = (rf_d1 - operand2) > 32'h7fffffff;
                         end
             opcode_orr: alu_result = rf_d1 | operand2;
             opcode_mov: alu_result = operand2;
@@ -317,7 +306,7 @@ module cpu(
         endcase
         //calculate data address
         if (inst_type(inst) == inst_type_data_trans) data_addr = rf_d1[4:0] + inst_memoff(inst);
-        if (inst_branch_islink(inst)) rf_wd = pc + 4;
+        if (inst_branch_islink(inst) & (inst_type(inst) == inst_type_branch)) rf_wd = pc + 4;
         else                          rf_wd = alu_result;
     end
 
@@ -339,23 +328,23 @@ module cpu(
 
             if (inst_type(inst) == inst_type_branch) begin
                 case (inst_cond(inst))
-                    cond_eq: (cpsr[cpsr_z] == 1'b1) pc <= branch_target: pc <= pc + 4;
-                    cond_ne: (cpsr[cpsr_z] == 1'b0) pc <= branch_target: pc <= pc + 4;
-                    cond_cs: (cpsr[cpsr_c] == 1'b1) pc <= branch_target: pc <= pc + 4;
-                    cond_cc: (cpsr[cpsr_c] == 1'b0) pc <= branch_target: pc <= pc + 4;
-                    cond_ns: (cpsr[cpsr_n] == 1'b1) pc <= branch_target: pc <= pc + 4;
-                    cond_nc: (cpsr[cpsr_n] == 1'b0) pc <= branch_target: pc <= pc + 4;
-                    cond_vs: (cpsr[cpsr_v] == 1'b1) pc <= branch_target: pc <= pc + 4;
-                    cond_vc: (cpsr[cpsr_v] == 1'b0) pc <= branch_target: pc <= pc + 4;
-                    cond_hi: ((cpsr[cpsr_c] == 1) & (cpsr[cpsr_z] == 0)) pc <= branch_target: pc <= pc + 4;
-                    cond_ls: ((cpsr[cpsr_c] == 1) | (cpsr[cpsr_z] == 0)) pc <= branch_target: pc <= pc + 4;
-                    cond_ge: (cpsr[cpsr_n] == cpsr_v) pc <= branch_target: pc <= pc + 4;
-                    cond_lt: (cpsr[cpsr_n] != cpsr_v) pc <= branch_target: pc <= pc + 4;
-                    cond_gt: ((cpsr[cpsr_z] == 0) & (cpsr[cpsr_n] == cpsr[cpsr_v])) pc <= branch_target: pc <= pc + 4;
-                    cond_le: ((cpsr[cpsr_z] == 1) | (cpsr[cpsr_n] != cpsr[cpsr_v])) pc <= branch_target: pc <= pc + 4;
+                    cond_eq: pc <= (cpsr[cpsr_z] == 1'b1) ? branch_target: pc + 4;
+                    cond_ne: pc <= (cpsr[cpsr_z] == 1'b0) ? branch_target: pc + 4;
+                    cond_cs: pc <= (cpsr[cpsr_c] == 1'b1) ? branch_target: pc + 4;
+                    cond_cc: pc <= (cpsr[cpsr_c] == 1'b0) ? branch_target: pc + 4;
+                    cond_ns: pc <= (cpsr[cpsr_n] == 1'b1) ? branch_target: pc + 4;
+                    cond_nc: pc <= (cpsr[cpsr_n] == 1'b0) ? branch_target: pc + 4;
+                    cond_vs: pc <= (cpsr[cpsr_v] == 1'b1) ? branch_target: pc + 4;
+                    cond_vc: pc <= (cpsr[cpsr_v] == 1'b0) ? branch_target: pc + 4;
+                    cond_hi: pc <= ((cpsr[cpsr_c] == 1'b1) & (cpsr[cpsr_z] == 0)) ?  branch_target: pc + 4;
+                    cond_ls: pc <= ((cpsr[cpsr_c] == 1'b1) | (cpsr[cpsr_z] == 0)) ?  branch_target: pc + 4;
+                    cond_ge: pc <= (cpsr[cpsr_n] == cpsr[cpsr_v]) ? branch_target: pc + 4;
+                    cond_lt: pc <= (cpsr[cpsr_n] != cpsr[cpsr_v]) ? branch_target: pc + 4;
+                    cond_gt: pc <= ((cpsr[cpsr_z] == 1'b0) & (cpsr[cpsr_n] == cpsr[cpsr_v])) ? branch_target: pc + 4;
+                    cond_le: pc <= ((cpsr[cpsr_z] == 1'b1) | (cpsr[cpsr_n] != cpsr[cpsr_v])) ? pc <= branch_target: pc + 4;
                     cond_al:  pc <= branch_target;
+                    default:  pc <= branch_target;
                 endcase
-                pc <= branch_target;
             end
         end
     end
@@ -363,7 +352,7 @@ module cpu(
     //load/store to memory
     always @(posedge clk) begin
         if (data_mem_we) begin
-            rf_s1 <= inst_rn(inst);
+            rf_rs1 <= inst_rn(inst);
             data_mem[data_addr] <= rf_d1;
         end
         data_mem_rd <= data_mem[data_addr];
