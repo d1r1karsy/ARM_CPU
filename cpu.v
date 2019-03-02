@@ -22,9 +22,8 @@ module cpu(
     localparam r15 = 4'b1111;
     localparam r14 = 4'b1110;
 
-    reg [31:0] cpsr;    // program status register, for cmp
-    localparam cpsr_n = 31; //n=v when a SIGNED number is greater than or equal to another
-                            //n=1 when negative value and n=0 when positive value
+    reg [31:0] cpsr;        // program status register, for cmp
+    localparam cpsr_n = 31; //n=1 when negative value
     localparam cpsr_z = 30; //z=1 when two numbers are equal
     localparam cpsr_c = 29; //c=1 when unsigned higher or same
     localparam cpsr_v = 28; //v=1 when there is singed overflow
@@ -150,22 +149,6 @@ module cpu(
     reg [data_width - 1:0]       data_mem_wd;
     reg [data_addr_width - 1:0]  data_addr;
     reg data_mem_we;
-    function automatic inst_index_bit; //pre/post indexing bit: dont worry
-        input [31:0]  inst;
-        inst_index_bit = inst[24];
-    endfunction
-    function automatic inst_updown_bit; //up/down bit: dont worry
-        input [31:0]  inst;
-        inst_updown_bit = inst[23];
-    endfunction
-    function automatic inst_word_bit;  //byte/word bit: dont worry
-        input [31:0]  inst;
-        inst_word_bit = inst[22];
-    endfunction
-    function automatic inst_wback_bit; //write-back bit: dont worry
-        input [31:0]  inst;
-        inst_wback_bit = inst[21];
-    endfunction
     function automatic inst_losto_bit; //load/store bit
         input [31:0]  inst;
         inst_losto_bit = inst[20];
@@ -256,7 +239,6 @@ module cpu(
 
     //-------instruction decode begin--------
     // "Decode" what gets read and written
-	reg [31:0] alu_result;
     always @(*) begin
         //branch with link: save PC to R14
         if ((inst_type(inst_dec) == inst_type_branch) & inst_branch_islink(inst_dec))
@@ -295,7 +277,8 @@ module cpu(
 
     //-------execution begin--------
 	reg [31:0] operand2;
-
+    reg [31:0] alu_result;
+    
     always @(posedge clk) begin
         prev_n <= cpsr[cpsr_n];
         prev_z <= cpsr[cpsr_z];
@@ -376,6 +359,7 @@ module cpu(
                             cpsr[cpsr_v] = 1'b0;
                         end
             opcode_mvn: alu_result = ~operand2;
+            default:    alu_result = 32'h0;
         endcase
 
         // "Decode" the branch target
@@ -398,14 +382,10 @@ module cpu(
     //-------pipeline stage 3 (EX/MEM)--------
 
     //-------memory begin--------
-	// "Decode" whether we write to memory
     always @(*) begin
-        data_mem_we = 1'b0;
-        case (inst_type(inst_mem))
-            // inst_type_branch:     data_mem_we = 1'b0;
-            // inst_type_data_proc:  data_mem_we = 1'b0;
-            inst_type_data_trans: data_mem_we = !(inst_losto_bit(inst_mem));
-        endcase
+        // "Decode" whether we write to memory
+        if (inst_type(inst_mem) == inst_type_data_trans) data_mem_we = !(inst_losto_bit(inst_mem));
+        else                                             data_mem_we = 1'b0;
 
 		if (inst_type(inst_mem) == inst_type_data_trans)
             data_addr = rf_d1_mem[4:0] + inst_memoff(inst_mem);
@@ -450,6 +430,7 @@ module cpu(
             inst_type_branch:     rf_we = inst_branch_islink(inst_wb);
             inst_type_data_proc:  if (inst_cond(inst_wb) == cond_al) rf_we = 1'b1;
             inst_type_data_trans: rf_we = inst_losto_bit(inst_wb);
+            default:              rf_we = 1'b0;
         endcase
 
         if (nreset && rf_we)
