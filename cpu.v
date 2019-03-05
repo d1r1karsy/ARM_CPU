@@ -27,7 +27,6 @@ module cpu(
     localparam cpsr_z = 30; //z=1 when two numbers are equal
     localparam cpsr_c = 29; //c=1 when unsigned higher or same
     localparam cpsr_v = 28; //v=1 when there is singed overflow
-    reg prev_n, prev_z, prev_c, prev_v;
 
     //register file constants and values from instruction (if applicable)
     reg [3:0]  rf_rs1; //read register 1, select on mux
@@ -160,7 +159,7 @@ module cpu(
 
     //pipeline variables
     //stage 1
-    reg [31:0] inst_fetch, pc_fetch, inst_dec, pc_dec;
+    reg [31:0] inst_fetch, pc_fetch, inst_dec, pc_dec, inst_temp, pc_temp;
     //stage 2
     reg [31:0] inst_exec, pc_exec, rf_d1_exec, rf_d2_exec, rf_d1_dec, rf_d2_dec, alu_result_exec;
     reg [3:0] rf_ws_exec, rf_ws_dec, rf_rs1_dec, rf_rs2_dec;
@@ -172,6 +171,9 @@ module cpu(
     reg [3:0] rf_ws_wb;
     reg [data_width - 1:0] data_mem_rd_mem, data_mem_rd_wb;
 
+	reg [31:0] branch_target, branch_target_mem, branch_target_exec;
+	reg cond_go, cond_go_mem, cond_go_exec;
+    reg stall;
 //------execution of intructions are done after this portion--------
 
 	//-------instruction fetch begin--------
@@ -192,14 +194,15 @@ module cpu(
 		rf[1] = '0;
 		rf[2] = '0;
 		rf[3] = '0;
-        code_mem[0] = 32'b1110_01_00000_0_0001_0001_000000000001;   // STR r1
-        code_mem[1] = 32'b1110_00_1_1101_0_0010_0010_00000000_0111; // MOV r2, #7
-        code_mem[2] = 32'b1110_00_1_0100_0_0001_0001_00000000_0101; // ADD r1, r1, #5
-        code_mem[3] = 32'b1110_00_1_0100_0_0010_0010_00000000_0010; // ADD r2, r2, #2
-        code_mem[4] = 32'b1110_00_1_0100_0_0011_0011_00000000_0011; // ADD r3, r3, #3
-        code_mem[5] = 32'b1110_01_00000_1_0001_0001_000000000001;   // LDR r1
+        code_mem[0] = 32'b1110_00_1_1101_0_0010_0010_00000000_0111; // MOV r2, #7
+		code_mem[1] = 32'b1110_01_00000_0_0010_0010_000000000001;   // STR r2
+        //code_mem[2] = 32'b1110_00_1_0100_0_0001_0001_00000000_0101; // ADD r1, r1, #5
+        code_mem[2] = 32'b1110_00_1_0100_0_0010_0010_00000000_0101; // ADD r2, r2, #5
+        code_mem[3] = 32'b1110_01_00000_1_0010_0010_000000000001;   // LDR r2
+		code_mem[4] = 32'b1110_00_1_0100_0_0010_0010_00000000_0011; // ADD r2, r2, #3
+		code_mem[5] = 32'b1110_00_1_0100_0_0011_0011_00000000_0100; // ADD r3, r3, #4
         code_mem[6] = 32'b1110_00_1_1010_1_0010_0000_00000000_1001; // CMP r2, #9
-		code_mem[7] = 32'b1110_101_1_11111111_11111111_11110101;	// PC
+		code_mem[7] = 32'b1110_101_1_11111111_11111111_11110111;	// PC = (PC + 8) - 52 = PC - 44
     end
 
 	assign code_addr = pc[code_addr_width - 1 + 2:2];
@@ -209,21 +212,20 @@ module cpu(
     reg [31:0] inst;
     always @(*) begin
         inst = code_mem_rd;
+        stall = (inst_type(inst_dec) & inst_losto_bit(inst_dec) & ((inst_rd(inst_dec) == inst_rd(inst_fetch)) | (inst_rd(inst_dec) == inst_rn(inst_fetch))));
     end
-
-	reg [31:0] branch_target;
-	reg cond_go;
 
 	 // increment PC
     always @(posedge clk) begin
         if (!nreset)
             pc <= 32'd0;
         else begin
-			if ((inst_type(inst) == inst_type_branch) && cond_go) pc <= branch_target;
+			if ((inst_type(inst_exec) == inst_type_branch) && cond_go_exec) pc <= branch_target_exec;
+			else if (stall) pc <= pc;
 			else pc <= pc + 4;
         end
     end
-	//-------instruction fetch begin--------
+	//-------instruction fetch end--------
 
 	//-------pipeline stage 1 (IF/ID)--------
 	always @ (*) begin
@@ -232,8 +234,16 @@ module cpu(
 	end
 
 	always @ (posedge clk) begin
-		pc_dec <= pc_fetch;
-		inst_dec <= inst_fetch;
+        pc_temp <= pc_fetch;
+        inst_temp <= inst_fetch;
+        if (stall) begin
+    		pc_dec <= pc_temp;
+    		inst_dec <= inst_temp;
+        end
+        else begin
+            pc_dec <= pc_fetch;
+    	    inst_dec <= inst_fetch;
+        end
 	end
 	//-------pipeline stage 1 (IF/ID)--------
 
@@ -266,25 +276,29 @@ module cpu(
 		inst_exec  <= inst_dec;
         rf_ws_exec <= rf_ws_dec;
 
-        if      (rf_ws_wb  == rf_rs1_dec) rf_d1_exec <= rf_wd_wb;
-        else if (rf_ws_mem == rf_rs1_dec) rf_d1_exec <= rf_wd_mem;
-        else                              rf_d1_exec <= rf_d1_dec;
-        if      (rf_ws_wb  == rf_rs2_dec) rf_d2_exec <= rf_wd_wb;
-        else if (rf_ws_mem == rf_rs2_dec) rf_d2_exec <= rf_wd_mem;
-        else                              rf_d2_exec <= rf_d2_dec;
+        if ((rf_ws_exec == rf_rs1_dec) & (inst_type(inst_exec) == inst_type_data_proc))
+            rf_d1_exec <= alu_result_exec;
+        else if ((rf_ws_mem == rf_rs1_dec))
+            rf_d1_exec <= rf_wd_mem;
+        else if ((rf_ws_wb  == rf_rs1_dec))
+            rf_d1_exec <= rf_wd_wb;
+        else
+            rf_d1_exec <= rf_d1_dec;
+
+        if ((rf_ws_exec == rf_rs2_dec) & (inst_type(inst_exec) == inst_type_data_proc))
+            rf_d2_exec <= alu_result_exec;
+        else if ((rf_ws_mem == rf_rs2_dec))
+            rf_d2_exec <= rf_wd_mem;
+        else if ((rf_ws_wb  == rf_rs2_dec))
+            rf_d2_exec <= rf_wd_wb;
+        else
+            rf_d2_exec <= rf_d2_dec;
 	end
 	//-------pipeline stage 2 (ID/EX)--------
 
     //-------execution begin--------
 	reg [31:0] operand2;
     reg [31:0] alu_result;
-    
-    always @(posedge clk) begin
-        prev_n <= cpsr[cpsr_n];
-        prev_z <= cpsr[cpsr_z];
-        prev_c <= cpsr[cpsr_c];
-        prev_v <= cpsr[cpsr_v];
-    end
 
     always @(*) begin
         // compute second operand
@@ -296,26 +310,25 @@ module cpu(
         // "Execute" the instruction
 		if (inst_type(inst_exec) == inst_type_branch) begin
 			case (inst_cond(inst_exec))
-				cond_eq: cond_go =  prev_z;
-				cond_ne: cond_go = ~prev_z;
-				cond_cs: cond_go =  prev_c;
-				cond_cc: cond_go = ~prev_c;
-				cond_ns: cond_go =  prev_n;
-				cond_nc: cond_go = ~prev_n;
-				cond_vs: cond_go =  prev_v;
-				cond_vc: cond_go = ~prev_v;
-				cond_hi: cond_go = (prev_c & ~prev_z);
-				cond_ls: cond_go = (prev_c | ~prev_z);
-				cond_ge: cond_go = (prev_n == prev_v);
-				cond_lt: cond_go = (prev_n != prev_v);
-				cond_gt: cond_go = (~prev_z & (prev_n == prev_v));
-				cond_le: cond_go = (prev_z | (prev_n != prev_v));
+				cond_eq: cond_go =  cpsr[cpsr_z];
+				cond_ne: cond_go = ~cpsr[cpsr_z];
+				cond_cs: cond_go =  cpsr[cpsr_c];
+				cond_cc: cond_go = ~cpsr[cpsr_c];
+				cond_ns: cond_go =  cpsr[cpsr_n];
+				cond_nc: cond_go = ~cpsr[cpsr_n];
+				cond_vs: cond_go =  cpsr[cpsr_v];
+				cond_vc: cond_go = ~cpsr[cpsr_v];
+				cond_hi: cond_go = (cpsr[cpsr_c] & ~cpsr[cpsr_z]);
+				cond_ls: cond_go = (cpsr[cpsr_c] | ~cpsr[cpsr_z]);
+				cond_ge: cond_go = (cpsr[cpsr_n] == cpsr[cpsr_v]);
+				cond_lt: cond_go = (cpsr[cpsr_n] != cpsr[cpsr_v]);
+				cond_gt: cond_go = (~cpsr[cpsr_z] & (cpsr[cpsr_n] == cpsr[cpsr_v]));
+				cond_le: cond_go = (cpsr[cpsr_z] | (cpsr[cpsr_n] != cpsr[cpsr_v]));
 				cond_al: cond_go = 1'b1;
 				default: cond_go = 1'b1;
 			endcase
 		end
 
-        alu_result = 32'h0;
         case (inst_opcode(inst_exec))
             opcode_and: alu_result = rf_d1_exec & operand2;
             opcode_eor: alu_result = rf_d1_exec ^ operand2;
@@ -362,7 +375,6 @@ module cpu(
             default:    alu_result = 32'h0;
         endcase
 
-        // "Decode" the branch target
         branch_target = pc_exec + 8 + inst_branch_imm(inst_exec);
     end
 	//-------execution end--------
@@ -370,6 +382,8 @@ module cpu(
     //-------pipeline stage 3 (EX/MEM)--------
     always @ (*) begin
         alu_result_exec = alu_result;
+		branch_target_exec = branch_target;
+		cond_go_exec = cond_go;
     end
 
     always @ (posedge clk) begin
@@ -378,6 +392,8 @@ module cpu(
         rf_d1_mem <= rf_d1_exec;
         alu_result_mem <= alu_result_exec;
         rf_ws_mem <= rf_ws_exec;
+		cond_go_mem <= cond_go_exec;
+		branch_target_mem <= branch_target_exec;
     end
     //-------pipeline stage 3 (EX/MEM)--------
 
@@ -426,6 +442,7 @@ module cpu(
     always @(*) begin
     // "Decode" whether we write the register file
         rf_we = 1'b0;
+		//if stall we = 0;
         case (inst_type(inst_wb))
             inst_type_branch:     rf_we = inst_branch_islink(inst_wb);
             inst_type_data_proc:  if (inst_cond(inst_wb) == cond_al) rf_we = 1'b1;
