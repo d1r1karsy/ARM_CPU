@@ -170,10 +170,11 @@ module cpu(
     reg [31:0] inst_wb, pc_wb, rf_wd_wb;
     reg [3:0] rf_ws_wb;
     reg [data_width - 1:0] data_mem_rd_mem, data_mem_rd_wb;
-
+    //pipeline branching
 	reg [31:0] branch_target, branch_target_mem, branch_target_exec;
 	reg cond_go, cond_go_mem, cond_go_exec;
-    reg stall;
+    //pipeline stalling
+    reg stall, stall_exec, stall_mem, stall_wb;
 //------execution of intructions are done after this portion--------
 
 	//-------instruction fetch begin--------
@@ -212,7 +213,6 @@ module cpu(
     reg [31:0] inst;
     always @(*) begin
         inst = code_mem_rd;
-        stall = (inst_type(inst_dec) & inst_losto_bit(inst_dec) & ((inst_rd(inst_dec) == inst_rd(inst_fetch)) | (inst_rd(inst_dec) == inst_rn(inst_fetch))));
     end
 
 	 // increment PC
@@ -234,11 +234,10 @@ module cpu(
 	end
 
 	always @ (posedge clk) begin
-        pc_temp <= pc_fetch;
-        inst_temp <= inst_fetch;
+        stall <= (!stall & inst_type(inst_dec) & inst_losto_bit(inst_dec) & ((inst_rd(inst_dec) == inst_rd(inst_fetch)) | (inst_rd(inst_dec) == inst_rn(inst_fetch))));
         if (stall) begin
-    		pc_dec <= pc_temp;
-    		inst_dec <= inst_temp;
+    		pc_dec <= pc_dec;
+    		inst_dec <= inst_dec;
         end
         else begin
             pc_dec <= pc_fetch;
@@ -275,8 +274,11 @@ module cpu(
 		pc_exec    <= pc_dec;
 		inst_exec  <= inst_dec;
         rf_ws_exec <= rf_ws_dec;
+        stall_exec <= stall;
 
-        if ((rf_ws_exec == rf_rs1_dec) & (inst_type(inst_exec) == inst_type_data_proc))
+        if (stall_exec)
+            rf_d1_exec <= data_mem_rd_mem;
+        else if ((rf_ws_exec == rf_rs1_dec) & (inst_type(inst_exec) == inst_type_data_proc))
             rf_d1_exec <= alu_result_exec;
         else if ((rf_ws_mem == rf_rs1_dec))
             rf_d1_exec <= rf_wd_mem;
@@ -285,7 +287,9 @@ module cpu(
         else
             rf_d1_exec <= rf_d1_dec;
 
-        if ((rf_ws_exec == rf_rs2_dec) & (inst_type(inst_exec) == inst_type_data_proc))
+        if (stall_exec)
+            rf_d2_exec <= data_mem_rd_mem;
+        else if ((rf_ws_exec == rf_rs2_dec) & (inst_type(inst_exec) == inst_type_data_proc))
             rf_d2_exec <= alu_result_exec;
         else if ((rf_ws_mem == rf_rs2_dec))
             rf_d2_exec <= rf_wd_mem;
@@ -387,13 +391,14 @@ module cpu(
     end
 
     always @ (posedge clk) begin
-        inst_mem <= inst_exec;
-        pc_mem  <= pc_exec;
-        rf_d1_mem <= rf_d1_exec;
-        alu_result_mem <= alu_result_exec;
-        rf_ws_mem <= rf_ws_exec;
-		cond_go_mem <= cond_go_exec;
-		branch_target_mem <= branch_target_exec;
+        inst_mem            <= inst_exec;
+        pc_mem              <= pc_exec;
+        rf_d1_mem           <= rf_d1_exec;
+        alu_result_mem      <= alu_result_exec;
+        rf_ws_mem           <= rf_ws_exec;
+		cond_go_mem         <= cond_go_exec;
+		branch_target_mem   <= branch_target_exec;
+        stall_mem           <= stall_exec;
     end
     //-------pipeline stage 3 (EX/MEM)--------
 
@@ -429,11 +434,12 @@ module cpu(
     end
 
     always @ (posedge clk) begin
-        inst_wb <= inst_mem;
-        pc_wb <= pc_mem;
-        rf_ws_wb <= rf_ws_mem;
-        data_mem_rd_wb <= data_mem_rd_mem;
-        rf_wd_wb <= rf_wd_mem;
+        inst_wb         <= inst_mem;
+        pc_wb           <= pc_mem;
+        rf_ws_wb        <= rf_ws_mem;
+        data_mem_rd_wb  <= data_mem_rd_mem;
+        rf_wd_wb        <= rf_wd_mem;
+        stall_wb        <= stall_mem;
     end
     //-------pipeline stage 4 (MEM/WB)--------
 
@@ -441,14 +447,15 @@ module cpu(
     // "Write back" the instruction
     always @(*) begin
     // "Decode" whether we write the register file
-        rf_we = 1'b0;
-		//if stall we = 0;
-        case (inst_type(inst_wb))
-            inst_type_branch:     rf_we = inst_branch_islink(inst_wb);
-            inst_type_data_proc:  if (inst_cond(inst_wb) == cond_al) rf_we = 1'b1;
-            inst_type_data_trans: rf_we = inst_losto_bit(inst_wb);
-            default:              rf_we = 1'b0;
-        endcase
+        if (stall_wb) rf_we = 1'b0;
+        else begin
+            case (inst_type(inst_wb))
+                inst_type_branch:     rf_we = inst_branch_islink(inst_wb);
+                inst_type_data_proc:  if (inst_cond(inst_wb) == cond_al) rf_we = 1'b1;
+                inst_type_data_trans: rf_we = inst_losto_bit(inst_wb);
+                default:              rf_we = 1'b0;
+            endcase
+        end
 
         if (nreset && rf_we)
             if (rf_ws_wb != r15)
