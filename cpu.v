@@ -466,27 +466,27 @@ module cpu(
 
     //outputs
 	assign led = pc[2];
-    assign debug_port1 = pc[9:2];
-    assign debug_port2 = rf[4];
-    assign debug_port3 = code_mem_rd[7:0];
+    assign debug_port1 = pc_wb[9:2];
+    assign debug_port2 = rf[2];
+    assign debug_port3 = rf[3];
 endmodule
 
-module cpu_testbench();
-   reg clk, nreset;
-   wire led;
-   wire [7:0] debug_port1, debug_port2, debug_port3;
-
-   cpu dut (.clk(clk), .nreset(nreset), .led(led), .debug_port1(debug_port1), .debug_port2(debug_port2), .debug_port3(debug_port3));
-
-   parameter CLOCK_PERIOD=100;
-   initial begin
-	   clk <= 0;
-	   forever #(CLOCK_PERIOD/2) clk <= ~clk;
-   end
-
-   initial begin
-	   nreset <= 0; repeat (1) @(posedge clk);
-	   nreset <= 1; repeat(40) @(posedge clk);
-	   $stop;
-   end
-endmodule
+// module cpu_testbench();
+//    reg clk, nreset;
+//    wire led;
+//    wire [7:0] debug_port1, debug_port2, debug_port3;
+//
+//    cpu dut (.clk(clk), .nreset(nreset), .led(led), .debug_port1(debug_port1), .debug_port2(debug_port2), .debug_port3(debug_port3));
+//
+//    parameter CLOCK_PERIOD=100;
+//    initial begin
+// 	   clk <= 0;
+// 	   forever #(CLOCK_PERIOD/2) clk <= ~clk;
+//    end
+//
+//    initial begin
+// 	   nreset <= 0; repeat (1) @(posedge clk);
+// 	   nreset <= 1; repeat(40) @(posedge clk);
+// 	   $stop;
+//    end
+// endmodule
