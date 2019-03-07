@@ -24,9 +24,9 @@ The Verilog code for the CPU design is at <code>cpu.v</code> and the top level m
         - [x] 4 physical pipelines
         - [x] R-type instructions
         - [x] Hazard detection
-        - [ ] Branching
-            - [ ] Conditional branching w/ cpsr tags
-        - [ ] Stalling
+        - [x] Branching
+            - [x] Conditional branching w/ cpsr tags
+        - [x] Stalling
 
 ## Set Up
 To run this cpu design on the TinyFPGA Bx follow [this tutorial](https://tinyfpga.com/bx/guide.html).
@@ -40,6 +40,6 @@ This cpu design and its waveforms can be simulated using ModelSim. All necessary
 1. Edit the `Launch_ModelSim.bat` file to point to your local ModelSim executable file.
 
     Example ModelSim path: `C:\intelFPGA\17.0\modelsim_ase\win32aloem\modelsim.exe`
-    
+
 2. Double click on `Launch_ModelSim.bat` file to launch the ModelSim application.
 3. Once ModelSim is running, enter `do runcpu.do` command to run the simulation.
